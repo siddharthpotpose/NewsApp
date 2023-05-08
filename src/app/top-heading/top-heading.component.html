@@ -1,0 +1,26 @@
+<!-- <p>top-heading works!</p>
+<table>
+  <tr *ngFor="let s of data">
+<td>{{s.author}}</td>
+<td>{{s.content}}</td>
+<td>{{s.description}}</td>
+<td>{{s.publishedAt}}</td>
+  </tr>
+</table> -->
+
+<div class="container-fluid bg-dark ">
+  <h1 class="text-light bg-dark mt-5 pt-2">Top Headlines <marquee class="text-warning">For more update visit on web site newsApp.com</marquee> </h1> <hr class="text-light">
+  <div class="row ">
+    <div class="col-lg-3  col-md-6 col-12 mt-4 d-flex justify-content-center" *ngFor="let s of data">
+      <div class="card bg-light" style="width: 20rem">
+        <img src="{{ s.urlToImage }}" alt="error" width="100%" />
+        <div class="card-body">
+         <h2 class="card-title">{{ s.title }}</h2>
+
+          <p>{{ s.content }}</p>
+          <a class="btn btn-info" href="{{s.url}}" target="_blank">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
